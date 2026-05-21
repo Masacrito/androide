@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "127893789505",
+    "project_id": "blue-41285",
+    "storage_bucket": "blue-41285.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127893789505:android:3ce1bfe06332e463405fc0",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_android_inventarios"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiTk9l9VWHZJLDRPupEr-WNovbtV2LL2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
