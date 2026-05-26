@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_dark"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        app:boxBackgroundColor="@color/app_surface"
+        app:boxStrokeColor="@color/app_accent"
+        app:hintTextColor="@color/app_text_tertiary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextNombreCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textColor="@color/app_text_primary"
+            android:textColorHint="@color/app_text_tertiary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Descripcion"
+        app:boxBackgroundColor="@color/app_surface"
+        app:boxStrokeColor="@color/app_accent"
+        app:hintTextColor="@color/app_text_tertiary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDescripcionCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:textColor="@color/app_text_primary"
+            android:textColorHint="@color/app_text_tertiary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchEstadoCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:checked="true"
+        android:textColor="@color/app_text_primary"
+        android:text="Activa"
+        app:showText="true" />
+
+</LinearLayout>

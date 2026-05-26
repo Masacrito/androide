@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:padding="16dp"
+    tools:context=".MovimientosActivity">
+
+    <TextView
+        android:id="@+id/textTituloMovimientos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Movimientos de inventario"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        android:textColor="@color/app_text_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFiltroTipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tipo"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="@color/app_text_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTituloMovimientos" />
+
+    <Spinner
+        android:id="@+id/spinnerTipoMovimiento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFiltroTipo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputBuscarProducto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Buscar producto"
+        app:boxBackgroundColor="@color/app_surface"
+        app:boxStrokeColor="@color/app_accent"
+        app:hintTextColor="@color/app_text_tertiary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerTipoMovimiento">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextBuscarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/app_text_primary"
+            android:textColorHint="@color/app_text_tertiary"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressMovimientos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputBuscarProducto"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textListaVacia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Aun no hay movimientos registrados."
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:textColor="@color/app_text_secondary"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressMovimientos"
+        tools:visibility="visible" />
+
+    <ScrollView
+        android:id="@+id/scrollMovimientos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonVolver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressMovimientos">
+
+        <LinearLayout
+            android:id="@+id/contenedorMovimientos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonVolver"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/app_surface_elevated"
+        android:text="Volver"
+        android:textAllCaps="false"
+        android:textColor="@color/app_text_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

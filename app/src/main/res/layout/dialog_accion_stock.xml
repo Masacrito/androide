@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_dark"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/textProductoStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_text_primary"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Cantidad"
+        app:boxBackgroundColor="@color/app_surface"
+        app:boxStrokeColor="@color/app_accent"
+        app:hintTextColor="@color/app_text_tertiary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextCantidadStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@color/app_text_primary"
+            android:textColorHint="@color/app_text_tertiary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Motivo"
+        android:textColor="@color/app_text_secondary"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+    <Spinner
+        android:id="@+id/spinnerMotivoStock"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_input_dark"
+        android:paddingHorizontal="12dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Observaciones"
+        app:boxBackgroundColor="@color/app_surface"
+        app:boxStrokeColor="@color/app_accent"
+        app:hintTextColor="@color/app_text_tertiary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextObservacionesStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:textColor="@color/app_text_primary"
+            android:textColorHint="@color/app_text_tertiary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
